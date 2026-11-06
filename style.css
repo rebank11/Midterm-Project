@@ -60,6 +60,8 @@ body {
     border-radius: var(--main-radius);
     margin: 10px 0 0;
     padding: 15px 20px;
+    position: absolute;
+    right: 40px;
 }
 .mainMenu.active {
     display: flex;

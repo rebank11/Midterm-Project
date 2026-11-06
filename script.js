@@ -12,7 +12,7 @@ async function getBooks() {
                 <div class="book-text"> 
                     <h2> Title: ${book.title} </h2>
                     <h3> Year: ${book.year} </h3>
-                    <h3> Published?: ${book.published} </h3>
+                   
                 </div>
 
             `
@@ -34,7 +34,12 @@ const menu = document.querySelector(".mainMenu");
 
 hamburger.addEventListener("click", function () {
   const isOpen = menu.classList.toggle("active");
-  hamburger.setAttribute("aria-expanded", isOpen);
+  if (menu.classList.contains('active')) {
+    hamburger.textContent="X"
+  }
+  else {
+    hamburger.textContent="☰"
+  }
 });
 
 const leftBtn = document.querySelector("#leftArrow")
